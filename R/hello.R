@@ -41,7 +41,7 @@ hello <- function(myname = ""){
   df_dummy <- data.frame(channel_from = c('(start)', '(conversion)', '(null)'),
                          channel_to = c('(start)', '(conversion)', '(null)'),
                          transition_probability = c(0, 1, 1))
-  df_trans <- dplyr :: rbind(df_trans, df_dummy)
+  df_trans <- rbind(df_trans, df_dummy)
 
   # ordering channels
   df_trans$channel_from <- factor(df_trans$channel_from,
