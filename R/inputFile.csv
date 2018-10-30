@@ -1,0 +1,4 @@
+path,conv,conv_null
+c1 > c2 > c3,1,0
+c1,0,1
+c2 > c3,1,0
