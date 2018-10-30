@@ -4,12 +4,10 @@
 #'
 #' @param symbol
 #'
-#' @return NULL
-#'
 #' @examples  stock_predict('AAPL')
 #'
 #' @export hello
 #'
 hello <- function() {
-  print("Hello, world!")
+  return("Hello, world!")
 }
