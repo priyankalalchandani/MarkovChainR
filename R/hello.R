@@ -18,7 +18,7 @@ hello <- function(myname = ""){
   #                   conv = c(2, 0,1),
   #                   conv_null = c(0, 1, 0))
 
-  read_csv <- read.csv("inputFile.csv", stringsAsFactors = FALSE, header = TRUE)
+  read_csv <- read.csv("C:\\Users\\user\\Documents\\inputFile.csv", stringsAsFactors = FALSE, header = TRUE)
   df1 <- tbl_df(read_csv)
   df1 <- aggregate(x = df1[2:3], by = list(df1$path), FUN = sum)
   names(df1) <- c("path", "conv", "conv_null")
