@@ -14,12 +14,12 @@ hello <- function(myname = ""){
 
   ##### simple example #####
   # creating a data sample
-  # df1 <- data.frame(path = c('c1 > c2 > c3', 'c1', 'c2 > c3'),
-  #                   conv = c(2, 0,1),
-  #                   conv_null = c(0, 1, 0))
+  df1 <- data.frame(path = c('c1 > c2 > c3', 'c1', 'c2 > c3'),
+                    conv = c(2, 0,1),
+                   conv_null = c(0, 1, 0))
 
-  read_csv <- read.csv("C:\\Users\\user\\Documents\\inputFile.csv", stringsAsFactors = FALSE, header = TRUE)
-  df1 <- tbl_df(read_csv)
+  #read_csv <- read.csv("C:\\Users\\user\\Documents\\inputFile.csv", stringsAsFactors = FALSE, header = TRUE)
+  #df1 <- tbl_df(read_csv)
   df1 <- aggregate(x = df1[2:3], by = list(df1$path), FUN = sum)
   names(df1) <- c("path", "conv", "conv_null")
   df1$path <- gsub(" > ",">",df1$path)
