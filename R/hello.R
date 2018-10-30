@@ -17,7 +17,7 @@ hello <- function(myname = ""){
   df1 <- data.frame(path = c('c1 > c2 > c3', 'c1', 'c2 > c3'), conv = c(1, 0, 0), conv_null = c(0, 1, 1))
 
   # calculating the model
-  mod1 <- markov_model(df1,
+  mod1 <- ChannelAttribution :: markov_model(df1,
                        var_path = 'path',
                        var_conv = 'conv',
                        var_null = 'conv_null',
