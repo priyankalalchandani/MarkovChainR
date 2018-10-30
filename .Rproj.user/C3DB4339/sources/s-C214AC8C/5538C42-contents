@@ -1,13 +1,14 @@
-#' @title Predicts Stock Price Movement for Given Stock Symbol
+#' Hello World
 #'
-#' @description This package predicts whether the stock price at tommorow's market close would be higher or lower compared to today's closing place.
+#' Basic hello world function to be called from the demo app
 #'
-#' @param symbol
-#'
-#' @examples  stock_predict('AAPL')
-#'
-#' @export hello
-#'
-hello <- function() {
-  return("Hello, world!")
+#' @export
+#' @param myname your name. Required.
+hello <- function(myname = ""){
+  if(myname == ""){
+    stop("Tell me your name!")
+  }
+  list(
+    message = paste("hello", myname, "! This is", R.Version()$version.string)
+  )
 }
