@@ -58,7 +58,5 @@ hello <- function(myname = ""){
   trans_matrix1 <- new("markovchain", transitionMatrix = trans_matrix)
 
   # plotting the graph
-  list(
-    message = paste(trans_matrix1)
-  )
+  plot(trans_matrix1, edge.arrow.size = 0.35)
 }
