@@ -55,7 +55,7 @@ hello <- function(myname = ""){
                          nrow = nrow(df_trans[, -1]), ncol = ncol(df_trans[, -1]),
                          dimnames = list(c(as.character(df_trans[, 1])), c(colnames(df_trans[, -1]))))
   trans_matrix[is.na(trans_matrix)] <- 0
-  #' @export markovchain
+  #' @export markovchainClass
   markovchainClass <- setClass("markovchain")
   trans_matrix1 <- new(markovchainClass, transitionMatrix = trans_matrix)
 
