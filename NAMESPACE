@@ -1,2 +1,2 @@
 export(hello)
-exportClasses(markovchain)
+importClassesFrom("markovchain",markovchain)
