@@ -10,4 +10,4 @@ License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 Imports:
-	dplyr,reshape2,ggplot2,ggthemes,ggrepel,RColorBrewer,ChannelAttribution,markovchain,stringr
+	dplyr,reshape2,ggplot2,ggthemes,ggrepel,RColorBrewer,ChannelAttribution,markovchain,stringr,sp,raster,stats4
