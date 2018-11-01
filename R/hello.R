@@ -60,5 +60,5 @@ hello <- function(myname = ""){
   #print(trans_matrix1.)
 
   # plotting the graph
-  plot(trans_matrix1, edge.arrow.size = 0.35)
+  ggplot2::qplot(trans_matrix1)
 }
