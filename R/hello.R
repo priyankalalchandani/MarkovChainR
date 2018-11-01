@@ -51,11 +51,13 @@ hello <- function(myname = ""){
   df_trans <- reshape2 :: dcast(df_trans, channel_from ~ channel_to, value.var = 'transition_probability')
 
   # creating the markovchain object
-  trans_matrix <- matrix(data = as.matrix(df_trans[, -1]),
+  trans_matrix <- matrix(data = as.vector(df_trans[, -1]),
                          nrow = nrow(df_trans[, -1]), ncol = ncol(df_trans[, -1]),
                          dimnames = list(c(as.character(df_trans[, 1])), c(colnames(df_trans[, -1]))))
   trans_matrix[is.na(trans_matrix)] <- 0
   trans_matrix1 <- new("markovchain", transitionMatrix = trans_matrix)
+
+  #print(trans_matrix1.)
 
   # plotting the graph
   plot(trans_matrix1, edge.arrow.size = 0.35)
